@@ -1,5 +1,7 @@
 <?php
-    session_start();
+    if (session_status() == PHP_SESSION_NONE){
+        session_start();
+    }
     
     if (!defined('BASEPATH')){
         exit('No direct script access allowed');
